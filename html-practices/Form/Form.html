@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UniversityForm</title>
+    </head>
+    <body>
+        <h1 style="font-family:garamond;">
+            College Application Process
+        </h1>
+        <hr>
+        <p style="font-size: 110%;">
+            Please register your information to complete the admission application process.<br>
+            The University will contact you within 1 week after validating your data.
+        </p>
+        <br>
+        <form>
+            <label for="Name">Full name* :</label>
+            <input id="Name" type="text" name="Name" required placeholder="Full name"
+                    pattern="[A-Z]([a-z]+)(|[ ])(|([A-Z]([a-z]+)))(|[ ])(|([A-Z]([a-z]+)))(|[ ])(|([A-Z]([a-z]+)))(|[ ])(|([A-Z]([a-z]+)))"
+                    title="Full name with initials in capital letters"
+            >
+            <!--[A-Z]([a-z]+)-->
+            <br><br>
+            <p>*Required</p>
+            <button>Enviar</button>
+        </form>
+    </body>
+</html>
