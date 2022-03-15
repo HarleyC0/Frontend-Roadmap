@@ -12,6 +12,7 @@
             Please register your information to complete the admission application process.<br>
             The University will contact you within 1 week after validating your data.
         </p>
+        <hr>
         <br>
         <form>
             <label for="Name">Full name* :</label>
@@ -36,14 +37,116 @@
             title="Personal Email"
             >
             <br><br>
-            <label for="">:</label>
-            <input id="" type="" name="" required placeholder=""
-                    pattern="."
-                    title=""
+            <label for="gender">Gender :</label>
+            <input id="gender" type="text" name="gender" placeholder="gender"
+                    list="genderlist"
+                    pattern="Male|Female|Don't specify"
+                    title="male, female, doesn't want to specify"
+            >
+            <datalist id="genderlist">
+                <option value="Male">
+                <option value="Female">
+                <option value="Don't specify">   
+            </datalist>
+            <br><br>
+            <label for="Location">Location* :</label>
+            <input id="Location" type="text" name="Location" required placeholder="Location"
+                    list="Locationlist"
+                    pattern="Oregon|Texas|San Francisco|Washington D.C"
+                    title="Location of list of options"
+            >
+            <datalist id="Locationlist">
+                <option value="Oregon">
+                <option value="Texas">
+                <option value="San Francisco">   
+                <option value="Washington D.C">
+            </datalist>
+            <br><br>
+            <label for="address">Address* :</label>
+            <input id="address" type="text" name="Street" required placeholder="Street"
+            >
+            <input id="address" type="text" name="Avenue" required placeholder="Avenue"
+            >
+            <input id="address" type="text" name="Zipcode" required placeholder="Zip Code"
+                pattern="[0-9]{5}"
+                title="5 digit Zip Code"
             >
             <br><br>
+            <label for="career">Career to apply* :</label>
+            <input id="career" type="text" name="career" required placeholder="Career"
+                    list="careerlist"
+                    pattern="Maths|Computer Science|Physics|Psychology|Philosophy"
+                    title="Career to apply"
+            >
+            <datalist id="careerlist">
+                <option value="Maths">
+                <option value="Computer Science">
+                <option value="Physics">   
+                <option value="Psychology">
+                <option value="Philosophy">    
+            </datalist>
+            <br><br>
+            <label for="birth">Date of birth* :</label>
+            <input id="birth" type="date" name="birth" required placeholder="Date of birth"
+                pattern="^(?:3[01]|[12][0-9]|0?[1-9])([\/.])(0?[1-9]|1[1-2])\1\d{4}$"
+                title="Date in format DD/MM/AA"
+            >
+            <br><br> 
+            <label for="country">Country of birth* :</label>
+            <input id="country" type="text" name="country" required placeholder="Country of birth"
+            > 
+            <br><br>
+            <label for="scholarship">Do you want to apply for a scholarship? :
+            <input id="scholarship" type="radio" name="scholarship" value="Yes">Yes
+            <input id="scholarship" type="radio" name="scholarship" value="No">No
+            </label>
+            <br><br>
+            <label for="season">Application season* :
+                <input id="season" type="radio" name="season" value="Spring" required>Spring
+                <input id="season" type="radio" name="season" value="Winter">Winter
+            </label>
+            <br><br><hr>
+            <p>Family's information* :</p>
+            <label for="mother">Mother's Name</label>
+            <input id="mother" type="text" name="Mothername" required placeholder="Full name"
+                    pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
+                    title="Full name with initials in capital letters"
+            >
+            <br><br>
+            <label for="father">Father's Name</label>
+            <input id="father" type="text" name="Fathername" required placeholder="Full name"
+                    pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
+                    title="Full name with initials in capital letters"
+            >
+            <br><br>
+            <label for="sibilings">Do you have sibilings?
+            <input id="sibilings" type="radio" name="sibilings" value="Yes" required>Yes
+            <input id="sibilings" type="radio" name="sibilings" value="No">No
+            </label>
+            <br><br>
+            <label for="income">Annual income of your family :</label>
+            <input id="income" type="text" name="income" required placeholder="Income"
+                    list="incomelist"
+                    pattern="less than 45.000|from 45.000 to 55.000|more of 55.000"
+                    title="Choose an option in USD"
+            >
+            <datalist id="incomelist">
+                <option value="less than 45.000">
+                <option value="from 45.000 to 55.000">
+                <option value="more of 55.000">      
+            </datalist>
+            <hr>
+            <br>
+            <button>Submit all</button>
+            <br><br>
+            <hr>
             <p>*Required</p>
-            <button>Enviar</button>
         </form>
     </body>
+    <!--DUDAS:
+        1. Después de preguntar si tiene o no hermanos, ¿cómo puedo hacer que se cree un input con la pregunta "¿Cúantos?" ?
+        dependiendo si la respuesta es "si" o "no".
+        2. En el imput de "income" puse type=text, si una de las opciones de lista lleva el signo $ no cumple el formato
+        ¿Qué type se usa para poner texto con precios, numero y simbolo $?  
+    -->
 </html>
