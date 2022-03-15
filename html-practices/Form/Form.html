@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <title>UniversityForm</title>
     </head>
     <body>
-        <h1 style="font-family:garamond;">
-            College Application Process
-        </h1>
+        <h1 style="font-family:garamond;">College Application Process</h1>
         <hr>
         <p style="font-size: 110%;">
             Please register your information to complete the admission application process.<br>
             The University will contact you within 1 week after validating your data.
         </p>
-        <hr>
-        <br>
+        <hr><br>
         <form>
             <label for="Name">Full name* :</label>
             <input id="Name" type="text" name="Name" required placeholder="Full name"
-                    pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
-                    title="Full name with initials in capital letters"
+                pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
+                title="Full name with initials in capital letters"
             >
-            <!--[A-Z]([a-z]+) = Expresión para un unico nombre o apellido
-                se añade (|[ ]([A-Z]([a-z]+))) para agregar otra nombre con un espacio antes
-                se debe añadir varias veces para permitir agregar nombres de varias nombres y apellidos
-            -->
             <br><br>
             <label for="number">Phone Number*:</label>
             <input id="number" type="tel" name="number" required placeholder="Phone Number"
-                    pattern="[+]([0-9]{1,3})([ ]([1-9]{9,10}))"
-                    title="Phone number with country code +xx xxxxxxxxxx"
+                pattern="[+]([0-9]{1,3})([ ]([1-9]{9,10}))"
+                title="Phone number with country code +xx xxxxxxxxxx"
             >
             <br><br>
             <label for="Email">Personal Email* :</label>
             <input id="Email" type="email" name="email" required placeholder="Personal Email"
-                    pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
-            title="Personal Email"
+                pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+                title="Personal Email"
             >
             <br><br>
             <label for="gender">Gender :</label>
             <input id="gender" type="text" name="gender" placeholder="gender"
-                    list="genderlist"
-                    pattern="Male|Female|Don't specify"
-                    title="male, female, doesn't want to specify"
+                list="genderlist"
+                pattern="Male|Female|Don't specify"
+                title="male, female, doesn't want to specify"
             >
             <datalist id="genderlist">
                 <option value="Male">
@@ -51,9 +44,9 @@
             <br><br>
             <label for="Location">Location* :</label>
             <input id="Location" type="text" name="Location" required placeholder="Location"
-                    list="Locationlist"
-                    pattern="Oregon|Texas|San Francisco|Washington D.C"
-                    title="Location of list of options"
+                list="Locationlist"
+                pattern="Oregon|Texas|San Francisco|Washington D.C"
+                title="Location of list of options"
             >
             <datalist id="Locationlist">
                 <option value="Oregon">
@@ -74,9 +67,9 @@
             <br><br>
             <label for="career">Career to apply* :</label>
             <input id="career" type="text" name="career" required placeholder="Career"
-                    list="careerlist"
-                    pattern="Maths|Computer Science|Physics|Psychology|Philosophy"
-                    title="Career to apply"
+                list="careerlist"
+                pattern="Maths|Computer Science|Physics|Psychology|Philosophy"
+                title="Career to apply"
             >
             <datalist id="careerlist">
                 <option value="Maths">
@@ -109,14 +102,14 @@
             <p>Family's information* :</p>
             <label for="mother">Mother's Name</label>
             <input id="mother" type="text" name="Mothername" required placeholder="Full name"
-                    pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
-                    title="Full name with initials in capital letters"
+                pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
+                title="Full name with initials in capital letters"
             >
             <br><br>
             <label for="father">Father's Name</label>
             <input id="father" type="text" name="Fathername" required placeholder="Full name"
-                    pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
-                    title="Full name with initials in capital letters"
+                pattern="[A-Z]([a-z]+)(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))(|[ ]([A-Z]([a-z]+)))"
+                title="Full name with initials in capital letters"
             >
             <br><br>
             <label for="sibilings">Do you have sibilings?
@@ -126,27 +119,24 @@
             <br><br>
             <label for="income">Annual income of your family :</label>
             <input id="income" type="text" name="income" required placeholder="Income"
-                    list="incomelist"
-                    pattern="less than 45.000|from 45.000 to 55.000|more of 55.000"
-                    title="Choose an option in USD"
+                list="incomelist"
+                pattern="less than 45.000|from 45.000 to 55.000|more of 55.000"
+                title="Choose an option in USD"
             >
             <datalist id="incomelist">
                 <option value="less than 45.000">
                 <option value="from 45.000 to 55.000">
                 <option value="more of 55.000">      
             </datalist>
-            <hr>
-            <br>
+            <hr><br>
             <button>Submit all</button>
-            <br><br>
-            <hr>
+            <br><br><hr>
             <p>*Required</p>
         </form>
     </body>
-    <!--DUDAS:
+    <!-- DUDAS:
         1. Después de preguntar si tiene o no hermanos, ¿cómo puedo hacer que se cree un input con la pregunta "¿Cúantos?" ?
         dependiendo si la respuesta es "si" o "no".
         2. En el imput de "income" puse type=text, si una de las opciones de lista lleva el signo $ no cumple el formato
-        ¿Qué type se usa para poner texto con precios, numero y simbolo $?  
-    -->
+        ¿Qué type se usa para poner texto con precios, numero y simbolo $? -->
 </html>
