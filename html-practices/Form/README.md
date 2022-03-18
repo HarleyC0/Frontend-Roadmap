@@ -26,6 +26,8 @@
 
 `<datalist>` : Specifies a list of pre-defined options for an *input* element
 
+`<select>` : Used to create a drop-down list, define the available options in the drop-down list
+
 `<option>` : Define an option in a selet list
 
 `<button>` : Defines a clickable button

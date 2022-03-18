@@ -31,57 +31,39 @@
         >
     <!------------------------------------><br><br>
         <label for="gender">Gender :</label>
-        <input id="gender" type="text" name="gender" placeholder="gender"
-            list="genderlist"
-            pattern="Male|Female|Don't specify"
-            title="male, female, doesn't want to specify"
-        >
-        <datalist id="genderlist">
-            <option value="Male">
-            <option value="Female">
-            <option value="Don't specify">   
-        </datalist>
+        <select id="gender" name="gender">
+            <option value=""></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Don't specify">Don't specify</option> 
+        </select>
     <!------------------------------------><br><br>
         <label for="Location">Location* :</label>
-        <input id="Location" type="text" name="Location" required placeholder="Location"
-            list="Locationlist"
-            pattern="Oregon|Texas|San Francisco|Washington D.C"
-            title="Location of list of options"
-        >
-        <datalist id="Locationlist">
-            <option value="Oregon">
-            <option value="Texas">
-            <option value="San Francisco">   
-            <option value="Washington D.C">
-        </datalist>
+        <select id="Location" name="Location" required>
+            <option value=""></option>
+            <option value="Oregon">Oregon</option>
+            <option value="Texas">Texas</option>
+            <option value="San Francisco">San Francisco</option>  
+            <option value="Washington D.C">Washington D.C</option>
+        </select>
     <!------------------------------------><br><br>
         <label for="address">Address* :</label>
-        <input id="address" type="text" name="Street" required placeholder="Street"
-        >
-        <input id="address" type="text" name="Avenue" required placeholder="Avenue"
-        >
-        <input id="address" type="text" name="Zipcode" required placeholder="Zip Code"
-            pattern="[0-9]{5}"
-            title="5 digit Zip Code"
-        >
+        <input id="address" type="text" name="Street" required placeholder="Street">
+        <input id="address" type="text" name="Avenue" required placeholder="Avenue">
+        <input id="address" type="text" name="Zipcode" required placeholder="Zip Code" pattern="[0-9]{5}" title="5 digit Zip Code">
     <!------------------------------------><br><br>
         <label for="career">Career to apply* :</label>
-        <input id="career" type="text" name="career" required placeholder="Career"
-            list="careerlist"
-            pattern="Maths|Computer Science|Physics|Psychology|Philosophy"
-            title="Career to apply"
-        >
-        <datalist id="careerlist">
-            <option value="Maths">
-            <option value="Computer Science">
-            <option value="Physics">   
-            <option value="Psychology">
-            <option value="Philosophy">    
-        </datalist>
+        <select id="career" name="career" required>
+            <option value=""></option>
+            <option value="Maths">Maths</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Physics">Physics</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Philosophy">Philosophy</option>
+        </select>
     <!------------------------------------><br><br>
         <label for="birth">Date of birth* :</label>
         <input id="birth" type="date" name="birth" required placeholder="Date of birth"
-            pattern="^(?:3[01]|[12][0-9]|0?[1-9])([\/.])(0?[1-9]|1[1-2])\1\d{4}$"
             title="Date in format DD/MM/AA"
         >
     <!------------------------------------><br><br> 
@@ -112,24 +94,20 @@
             title="Full name with initials in capital letters"
         >
     <!------------------------------------><br><br>
-        <label for="sibilings">Do you have sibilings?
+        <label for="sibilings">Do you have sibilings? *
         <input id="sibilings" type="radio" name="sibilings" value="Yes" required>Yes
         <input id="sibilings" type="radio" name="sibilings" value="No">No
         </label>
     <!------------------------------------><br><br>
-        <label for="income">Annual income of your family :</label>
-        <input id="income" type="text" name="income" required placeholder="Income"
-            list="incomelist"
-            pattern="less than 45.000|from 45.000 to 55.000|more of 55.000"
-            title="Choose an option in USD"
-        >
-        <datalist id="incomelist">
-            <option value="less than 45.000">
-            <option value="from 45.000 to 55.000">
-            <option value="more of 55.000">      
-        </datalist>
+        <label for="income">Annual income of your family *:</label>
+        <select id="incomelist" name="income" required>
+            <option value=""></option>
+            <option value="less than $45.000">Less than $45.000</option>
+            <option value="from $45.000 to $55.000">From $45.000 to $55.000</option>
+            <option value="more of $55.000">More of $55.000</option>      
+        </select>
     <!------------------------------------><hr><br>
-        <button>Submit all</button>
+        <button type="submit">Submit all</button>
         <br><br><hr>
         <p>*Required</p>
     </form>
@@ -138,5 +116,7 @@
         1. Después de preguntar si tiene o no hermanos, ¿cómo puedo hacer que se cree un input con la pregunta "¿Cúantos?" ?
         dependiendo si la respuesta es "si" o "no".
         2. En el imput de "income" puse type=text, si una de las opciones de lista lleva el signo $ no cumple el formato
-        ¿Qué type se usa para poner texto con precios, numero y simbolo $? -->
+        ¿Qué type se usa para poner texto con precios, numero y simbolo $? 
+        3. ¿Como poner un mensaje de informacion y error en una etiqueta select? de la forma en la que se puede poner un tittle en un input (ya que te da informacion)
+    -->
 </html>
