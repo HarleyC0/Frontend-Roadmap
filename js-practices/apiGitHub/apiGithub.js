@@ -19,11 +19,15 @@ window.onload = async () => {
 
 function cachtUrlUser(envioEvent) {
     envioEvent.preventDefault();
-    let userName = document.getElementById("user").value;
-    console.log(userName);
-    let urlUser = "https://api.github.com/users/" + userName;
-    console.log(urlUser);
-    return urlUser;
+    if (user.value.length>0) {
+        let userName = document.getElementById("user").value;
+        console.log(userName);
+        let urlUser = "https://api.github.com/users/" + userName;
+        console.log(urlUser);
+        return urlUser;
+    } else {
+        alert('Insert user');
+    };
 }
 
 async function createJson(Url) {
@@ -36,10 +40,11 @@ async function createJson(Url) {
 
 function createTable(userJson) {
     userJson.then((user) => {
-        console.log("todo bien");
+        const avatar = document.createElement('img');
+        avatar.src = user.avatar_url;
+        avatar.classList.toggle('imgCss');
         const table = document.createElement('table');
-        table.style.backgroundColor = 'beige';
-        table.style.borderStyle = 'groove';
+        table.classList.toggle('tableCss');
         const tbody = document.createElement('tbody');
         for (const key in user) {
             const row = document.createElement('tr');
@@ -48,16 +53,14 @@ function createTable(userJson) {
         }
         table.appendChild(tbody);
         const body = document.getElementById('root');
+        body.appendChild(avatar);
         body.appendChild(table);
     });
 }
 
 /**
  * Mejoras Pendientes:
- * 1. No reperit clik, eliminar tabla actual y crear una nueva
- * 2. Dar estilos a la tabla
- * 3. Obligar a poner un usuario para crear tabla
- * 4. renderizar imagen perfil
+ * 1. No repetir clik, eliminar tabla actual y crear una nueva
  */
 
 

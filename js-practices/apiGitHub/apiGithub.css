@@ -21,10 +21,6 @@ form {
     align-items: center;
 }
 
-/* form label {
-    
-} */
-
 form input {
     text-align: center;
     margin: 10px auto;
@@ -70,5 +66,17 @@ button {
     transform: translateY(-1px);
   }
 
+  .tableCss {
+    background-color: rgb(242, 255, 255);
+    border-radius: 10px;
+    border-style:ridge;
+    max-width: 400px;
+    margin: 10px  auto;
+  }
+
+.imgCss {
+    max-width: 400px;
+    margin: 10px auto;
+}
 
 
